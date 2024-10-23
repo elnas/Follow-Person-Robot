@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://gitlab.com/research-project-ros/ohmni_2dnav.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[branch "nav_dynamic"]
+	remote = origin
+	merge = refs/heads/nav_dynamic
+[branch "navigation-current"]
+	remote = origin
+	merge = refs/heads/navigation-current

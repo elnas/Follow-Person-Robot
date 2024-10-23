@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- ROSPlan -->
+    <include file="$(find ohmni_rosplan)/launch/ohmni_rosplan_config.launch" >
+        <arg name="domain" value="$(find ohmni_rosplan)/common/ohmni_basic_follow_domain.pddl"/>
+        <arg name="problem" value="$(find ohmni_rosplan)/common/ohmni_basic_follow_problem.pddl"/>
+    </include>
+
+    <!-- rosplan move base action interface, makes link between rosplan dispatcher and hardware -->
+
+    <node pkg="ohmni_rosplan_interfaces" type="moveohmni" name="ohmni_move" respawn="false" output="screen">
+        <param name="knowledge_base" value="rosplan_knowledge_base" />
+        <param name="pddl_action_name" value="move" /> 
+        <param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/ohmni_action_dispatch" /> <!-- dispatch action topic -->
+        <param name="action_feedback_topic" value="/rosplan_plan_dispatcher/ohmni_action_feedback" /> <!-- feedback action topic -->
+    </node>
+
+    <node pkg="ohmni_rosplan_interfaces" type="orientohmni" name="ohmni_orient" respawn="false" output="screen">
+        <param name="knowledge_base" value="rosplan_knowledge_base" />
+        <param name="pddl_action_name" value="orientation" /> 
+        <param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/ohmni_action_dispatch" /> <!-- dispatch action topic -->
+        <param name="action_feedback_topic" value="/rosplan_plan_dispatcher/ohmni_action_feedback" /> <!-- feedback action topic -->
+    </node>
+
+
+</launch>

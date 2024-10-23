@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Map server -->
+  <arg name="map_file" default="$(find ohmni_2dnav)/src/maps/map.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+  
+  <!-- start the AMCL package using our localization launch file -->
+  <include file="$(find ohmni_2dnav)/src/launch/startlocalization.launch"/>
+  
+  <!-- Localization
+    <node pkg="amcl" type="amcl" name="amcl" output="screen">
+    <remap from="scan" to="/scan"/>
+    <param name="odom_frame_id" value="odom"/>
+    <param name="odom_model_type" value="diff-corrected"/>
+    <param name="base_frame_id" value="base_link"/>
+    <param name="global_frame_id" value="map"/>
+    <param name="transform_tolerance" value="2.0"/>
+    <param name="min_particles" value="5.0"/>
+    <param name="max_particles" value="20.0"/>
+    <param name="tf_broadcast" value="true" />
+    <param name="initial_pose_x" value="-0.002"/>
+    <param name="initial_pose_y" value="0"/>
+    <param name="initial_pose_a" value="0"/>
+  </node> -->
+<!-- Move base -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+      <!-- param is used to set node parameters-->
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+    <rosparam file="$(find ohmni_2dnav)/src/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find ohmni_2dnav)/src/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find ohmni_2dnav)/src/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find ohmni_2dnav)/src/config/global_costmap_params.yaml" command="load" />
+    <!--<rosparam file="$(find ohmni_2dnav)/src/config/base_local_planner_params.yaml" command="load" /> -->
+    <rosparam file="$(find ohmni_2dnav)/src/config/dwa_local_planner_params.yaml" command="load" />
+    <!--<rosparam file="$(find ohmni_2dnav)/src/config/move_base_params.yaml" command="load" /> -->
+    
+    <remap from="cmd_vel" to="/tb_cmd_vel"/>
+    <remap from="odom" to="/tb_control/wheel_odom"/>
+    <remap from="scan" to="/scan"/>
+
+    <param name="base_global_planner" type="string" value="navfn/NavfnROS" />
+    <!--<param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>-->
+
+  </node>
+
+
+</launch>
+
+
+
+

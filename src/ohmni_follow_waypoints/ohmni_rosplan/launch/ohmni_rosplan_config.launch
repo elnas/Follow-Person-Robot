@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- declaration of pased argumnets -->
+  <arg name="domain"/>
+  <arg name="problem"/>
+
+
+  <!-- pddl domain path -->
+  <arg name="domain_path"  value="$(arg domain)"/>
+
+  <!-- pddl problem path -->
+  <arg name="problem_path" value="$(arg problem)"/>
+
+  <!-- automatically generate pddl problem to defined path-->
+  <arg name="autom_gen_problem_path" value="$(arg problem)"/>
+
+  <!-- generated plan will be saved to this location and will be used by plan parser and plan dispatcher -->
+  <arg name="data_path" default="$(find ohmni_rosplan)/common/" />
+
+
+  <!-- knowledge base node -->
+  <node name="rosplan_knowledge_base" pkg="rosplan_knowledge_base" type="knowledgeBase" respawn="false" output="screen">
+    <param name="domain_path" value="$(arg domain_path)" />
+    <param name="problem_path" value="$(arg problem_path)" />
+    <!-- conditional planning flags -->
+    <param name="use_unknowns" value="false" />
+  </node>
+
+  <!-- problem generation node -->
+  <include file="$(find rosplan_planning_system)/launch/includes/problem_interface.launch">
+    <arg name="knowledge_base"   value="rosplan_knowledge_base" />
+    <arg name="domain_path"      value="$(arg domain_path)" />
+
+    <arg name="problem_path"     value="$(arg autom_gen_problem_path)" />
+    <arg name="problem_topic"    value="ohmni_problem_instance" />   <!-- problem topic -->
+  </include>
+
+  <!-- planner interface node : using popf planner interface -->
+  <include file="$(find rosplan_planning_system)/launch/includes/planner_interface.launch">
+    <arg name="use_problem_topic"    value="true" />
+    <arg name="problem_topic"        value="/rosplan_problem_interface/ohmni_problem_instance" />
+    <arg name="planner_topic"        value="ohmni_planner_output" /> <!-- planner topic -->
+    <arg name="domain_path"          value="$(arg domain_path)" />
+    <arg name="problem_path"         value="$(arg autom_gen_problem_path)" />
+    <arg name="data_path"            value="$(arg data_path)" />
+    <arg name="planner_command"      value="timeout 10 $(find rosplan_planning_system)/common/bin/popf DOMAIN PROBLEM" />
+    <arg name="planner_interface"    value="popf_planner_interface" />
+  </include>
+
+ 
+<!-- plan parsing node :  using simple plan parser-->
+<node name="rosplan_parsing_interface" pkg="rosplan_planning_system" type="pddl_simple_plan_parser" respawn="false" output="screen">
+	<param name="knowledge_base" value="rosplan_knowledge_base" />
+	<param name="planner_topic"  value="/rosplan_planner_interface/ohmni_planner_output" /> 
+	<param name="plan_topic"     value="ohmni_generated_plan" /> <!-- publish plan topic -->
+</node>
+		
+<!-- plan dispatching node : using simple plan dispatcher-->
+<node name="rosplan_plan_dispatcher" pkg="rosplan_planning_system" type="pddl_simple_plan_dispatcher" respawn="false" output="screen">
+	<param name="knowledge_base"        value="rosplan_knowledge_base" />
+	<param name="plan_topic"            value="/rosplan_parsing_interface/ohmni_generated_plan" />
+	<param name="action_dispatch_topic" value="ohmni_action_dispatch" /> <!-- dispatch action topic -->
+	<param name="action_feedback_topic" value="ohmni_action_feedback" /> <!-- feedback action topic -->
+</node>	
+</launch>

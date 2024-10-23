@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 1027a2806712918eea967da02f12c3d8c95af9db avinashk15 <avinashkangare9@gmail.com> 1662634633 +0200	clone: from https://gitlab.com/avinashk15/darknet_ros.git
+1027a2806712918eea967da02f12c3d8c95af9db 05455630068ac0a5f993ef6980d9f163f3d5369c avinashk15 <avinashkangare9@gmail.com> 1662750925 +0200	commit: darknet changes to tiny model to detect person
+05455630068ac0a5f993ef6980d9f163f3d5369c 1df4f416136bb997ec6e6e864cc773f0c43d083d avinashk15 <avinashkangare9@gmail.com> 1665130433 +0200	commit: add launch file for v2

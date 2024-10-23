@@ -1,0 +1,6 @@
+# pack-refs with: peeled fully-peeled sorted 
+8fec01823395963369af5042563c6a28e1fce6c1 refs/remotes/origin/follow-robot-stable
+61bc6fc1f535cb0d52620158fef48241b777dcbe refs/remotes/origin/main
+cdad95e598ad49f0435524f2bfeac3f58f0e003a refs/remotes/origin/multiple-waypoints-ohmni
+dcdf5512324b7bc8542640d7d102f1f756c090e0 refs/remotes/origin/multiple-waypoints-plan
+1ae20b698924ba5ad036269e93dfebc9e89dda34 refs/remotes/origin/plan-sim-actions

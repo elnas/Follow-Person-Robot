@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- ROSPlan -->
+    <include file="$(find ohmni_rosplan)/launch/ohmni_rosplan_config.launch" >
+        <arg name="domain" value="$(find ohmni_rosplan)/common/ohmni_advance_follow_domain.pddl"/>
+        <arg name="problem" value="$(find ohmni_rosplan)/common/ohmni_advance_follow_problem.pddl"/>
+    </include>
+
+    <!-- rosplan move base action interface, makes link between rosplan dispatcher and hardware -->
+
+    <node pkg="ohmni_rosplan_interfaces" type="clockwisefollowperson" name="ohmni_rotate_clockwise" respawn="false" output="screen">
+        <param name="knowledge_base" value="rosplan_knowledge_base" />
+        <param name="pddl_action_name" value="rotate_clockwise" /> 
+        <param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/ohmni_action_dispatch" /> <!-- dispatch action topic -->
+        <param name="action_feedback_topic" value="/rosplan_plan_dispatcher/ohmni_action_feedback" /> <!-- feedback action topic -->
+    </node>
+
+    <node pkg="ohmni_rosplan_interfaces" type="anticlockwisefollowperson" name="ohmni_rotate_anti_clockwise" respawn="false" output="screen">
+        <param name="knowledge_base" value="rosplan_knowledge_base" />
+        <param name="pddl_action_name" value="rotate_anticlockwise" /> 
+        <param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/ohmni_action_dispatch" /> <!-- dispatch action topic -->
+        <param name="action_feedback_topic" value="/rosplan_plan_dispatcher/ohmni_action_feedback" /> <!-- feedback action topic -->
+    </node>
+
+    <node pkg="ohmni_rosplan_interfaces" type="moveforwardfollowperson" name="ohmni_move_forward" respawn="false" output="screen">
+        <param name="knowledge_base" value="rosplan_knowledge_base" />
+        <param name="pddl_action_name" value="move_forward" /> 
+        <param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/ohmni_action_dispatch" /> <!-- dispatch action topic -->
+        <param name="action_feedback_topic" value="/rosplan_plan_dispatcher/ohmni_action_feedback" /> <!-- feedback action topic -->
+    </node>
+
+    <node pkg="ohmni_rosplan_interfaces" type="stopfollowperson" name="ohmni_stop" respawn="false" output="screen">
+        <param name="knowledge_base" value="rosplan_knowledge_base" />
+        <param name="pddl_action_name" value="stop" /> 
+        <param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/ohmni_action_dispatch" /> <!-- dispatch action topic -->
+        <param name="action_feedback_topic" value="/rosplan_plan_dispatcher/ohmni_action_feedback" /> <!-- feedback action topic -->
+    </node>
+
+    <node pkg="ohmni_rosplan_interfaces" type="movebackwardfollowperson" name="ohmni_move_backward" respawn="false" output="screen">
+        <param name="knowledge_base" value="rosplan_knowledge_base" />
+        <param name="pddl_action_name" value="move_backward" /> 
+        <param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/ohmni_action_dispatch" /> <!-- dispatch action topic -->
+        <param name="action_feedback_topic" value="/rosplan_plan_dispatcher/ohmni_action_feedback" /> <!-- feedback action topic -->
+    </node>
+
+
+</launch>
+

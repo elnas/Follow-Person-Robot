@@ -1,0 +1,23 @@
+# pack-refs with: peeled fully-peeled sorted 
+0e5b4d2cf48fdec18806845989bc53c8501e6ac4 refs/remotes/origin/bud_in_scan_end_points
+6412ebb9cf58d7726b4646c478249d989449f664 refs/remotes/origin/c++11
+6bd70466c16c786aa778a335da7b0825f0912453 refs/remotes/origin/drop-signals
+df1fc2e3a622576975d6650f3c30bc2f3e5e4a71 refs/remotes/origin/fix-cmake
+7ad1e95b3837c08634614dec5a2ac3b8544691ed refs/remotes/origin/hydro-devel
+2e6835d808bbf0d6b885c361f03522f85f7203e4 refs/remotes/origin/indigo-devel
+0f3ef87223423d31a51f573c4c99aad34b447505 refs/remotes/origin/inverted_scans
+4678339ac1f3ffbb8640f2508439d718b82fa3b5 refs/remotes/origin/minor_fix_unused_var
+74acfc99ce9c0a01441a744695e34580ccb20f48 refs/remotes/origin/noetic-devel
+716fb6c658a0e52acb434e26971b02d37f6088ba refs/remotes/origin/raytrace_free_space
+f69eeb6716d74a286fdb99997cf6f674fcb64f65 refs/remotes/origin/revert_inverted_scan
+a70b91473506f924167e3c945d790a8fa692fb62 refs/remotes/origin/simulate_scan_max_range
+d9e110abcab160f37316552c89c229b8b3f50ca8 refs/tags/0.0.1
+8d64dd8c66d03fefd35c56ec92135dd690eebdb2 refs/tags/0.0.10
+7967e6d1de6737f1a9b441f253d633ab7663e1c7 refs/tags/0.0.2
+f4c492ac5385943ae2b5f7fe1a64f58aa3178677 refs/tags/0.0.3
+cf7368bffb95ada09339204747a5a568f4167be5 refs/tags/0.0.4
+249f8d85ecb9cc0d38626bf4d079c326836b3292 refs/tags/0.0.5
+7ad1e95b3837c08634614dec5a2ac3b8544691ed refs/tags/0.0.6
+fd3f026feb3e5c2f27efb7666c5769ffcc96533e refs/tags/0.0.7
+707196cca80e13f0af1264227bfef4295d2cadff refs/tags/0.0.8
+f69eeb6716d74a286fdb99997cf6f674fcb64f65 refs/tags/0.0.9

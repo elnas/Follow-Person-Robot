@@ -1,0 +1,14 @@
+47c9c629fc93e6c6bbcd3109eb2d5b55efce400d		branch 'noetic-devel' of https://github.com/ros-planning/navigation
+01cccf6881fec07bdd53e04af6bd97cdd0bbc8e1	not-for-merge	branch '3d_navigation' of https://github.com/ros-planning/navigation
+fecdad8037f40f85ecd1673ecc897684e0e41ebf	not-for-merge	branch 'add_twirling_penalty' of https://github.com/ros-planning/navigation
+a5bce3aafaf656591d423009966e70c936db3dd2	not-for-merge	branch 'groovy' of https://github.com/ros-planning/navigation
+689eae138fec015e13220c3b251122b70387d580	not-for-merge	branch 'groovy-devel' of https://github.com/ros-planning/navigation
+0304e1fa4e2fb66e4e0aa41945676f99fa238e4d	not-for-merge	branch 'groovy-devel-catkinized' of https://github.com/ros-planning/navigation
+c3e9d3035ec2a854ce469cf4569b52eb77b56919	not-for-merge	branch 'hydro-devel' of https://github.com/ros-planning/navigation
+3e630a246241bc91a09f28e112554154f381c0cc	not-for-merge	branch 'indigo-devel' of https://github.com/ros-planning/navigation
+f7e412fe7349f100fb09a340514b3ae8d20d902a	not-for-merge	branch 'jade-devel' of https://github.com/ros-planning/navigation
+e2e9482695f11d8d30326480e3283967d94d83f5	not-for-merge	branch 'kinetic-devel' of https://github.com/ros-planning/navigation
+846d123e64d373a7cdf0735f24f289181434455b	not-for-merge	branch 'lunar' of https://github.com/ros-planning/navigation
+c81a8b1da643a58fe31957b6da2aa02f1ddc3fc7	not-for-merge	branch 'melodic-devel' of https://github.com/ros-planning/navigation
+ef003835e9819ae5de80b7ef2733924f95417a4a	not-for-merge	branch 'navigation-1.8' of https://github.com/ros-planning/navigation
+47c9c629fc93e6c6bbcd3109eb2d5b55efce400d	not-for-merge	tag '1.17.2' of https://github.com/ros-planning/navigation

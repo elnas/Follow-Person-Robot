@@ -1,0 +1,5 @@
+61bc6fc1f535cb0d52620158fef48241b777dcbe		branch 'main' of https://gitlab.com/research-project-ros/ohmni_follow_waypoints
+8fec01823395963369af5042563c6a28e1fce6c1	not-for-merge	branch 'follow-robot-stable' of https://gitlab.com/research-project-ros/ohmni_follow_waypoints
+cdad95e598ad49f0435524f2bfeac3f58f0e003a	not-for-merge	branch 'multiple-waypoints-ohmni' of https://gitlab.com/research-project-ros/ohmni_follow_waypoints
+dcdf5512324b7bc8542640d7d102f1f756c090e0	not-for-merge	branch 'multiple-waypoints-plan' of https://gitlab.com/research-project-ros/ohmni_follow_waypoints
+1ae20b698924ba5ad036269e93dfebc9e89dda34	not-for-merge	branch 'plan-sim-actions' of https://gitlab.com/research-project-ros/ohmni_follow_waypoints

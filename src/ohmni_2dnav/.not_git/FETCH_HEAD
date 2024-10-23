@@ -1,0 +1,5 @@
+eacfaf7f6463331290435e74eff84cae895138d6		branch 'main' of https://gitlab.com/research-project-ros/ohmni_2dnav
+47e5d0f51f5751163b7624b025a0465db1eafef4	not-for-merge	branch 'nav_dynamic' of https://gitlab.com/research-project-ros/ohmni_2dnav
+81693a7ef334005adbfe100d55cebd6224707330	not-for-merge	branch 'navigation-backup' of https://gitlab.com/research-project-ros/ohmni_2dnav
+16ab21eed1c7f97b39f3178abcbc175866f8f447	not-for-merge	branch 'navigation-current' of https://gitlab.com/research-project-ros/ohmni_2dnav
+d773f26bd30f2a6b57ba32ce969cd7c03c0e828b	not-for-merge	branch 'navigation-eram' of https://gitlab.com/research-project-ros/ohmni_2dnav
