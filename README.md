@@ -1,4 +1,4 @@
-# Multi-Application Implementation Using Path Planning and Computer Vision
+# Automating a Telepresence Robot for Human Detection, Tracking, and Following
 This repository uses computer vision and SLAM to enable an Ohmni telepresence robot to follow a person in its filed of view automatically.
 
 ## Getting started
