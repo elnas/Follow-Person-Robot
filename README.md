@@ -1,9 +1,9 @@
 # Multi-Application Implementation Using Path Planning and Computer Vision
-This repository uses computer vision and SLAM to enable an Ohmni telepresence robot to automatically follow a person in its filed of view.
+This repository uses computer vision and SLAM to enable an Ohmni telepresence robot to follow a person in its filed of view automatically.
 
 ## Getting started
 This repository contains different ROS packages. You need to have ros-noetic installed on your machine. 
-The ros package was deployed for use and to automate an Ohmni Telepresence Developer Robot.
+The workspace was deployed to automate an Ohmni Telepresence Developer Robot.
 
 ### Prerequisite
 sudo apt-get install ros-noetic-tf2-sensor-msgs
