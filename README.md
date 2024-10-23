@@ -1,5 +1,5 @@
 # Automating a Telepresence Robot for Human Detection, Tracking, and Following
-This repository uses computer vision and SLAM to enable an Ohmni telepresence robot to follow a person in its filed of view automatically.
+This repository uses computer vision and SLAM to automatically enable an Ohmni telepresence robot to follow a person in its field of view.
 
 ## Getting started
 This repository contains different ROS packages. You need to have ros-noetic installed on your machine. 
