@@ -16,7 +16,7 @@ sudo apt install flex bison freeglut3-dev libbdd-dev python-catkin-tools ros-$RO
 
 ## Citation
 
-Please cite these papers in your publications if the module helps your research.
+Please cite this paper in your publications if the module helps your research.
 
 @InProceedings{10.1007/978-3-031-43360-3_13,
 author="Aboki, Nasiru
