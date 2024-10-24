@@ -11,7 +11,7 @@ sudo apt install flex bison freeglut3-dev libbdd-dev python-catkin-tools ros-$RO
 
 ## Build
 1. Create a catkin Workspace
-2. Go to your catkin workspace and pull git pull src folder to the workspace 
+2. Go to your catkin workspace and git pull src folder to the workspace 
 3. Build your catkin workspace using catkin_make.
 
 ## Citation
